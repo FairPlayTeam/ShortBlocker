@@ -5,7 +5,7 @@ Une extension Chrome/Firefox qui vous permet de :
 - **Supprimer** les YouTube Shorts et les Instagram Reels directement dans le flux  
 - **Bloquer** complètement TikTok et tout autre domaine de votre choix, avec redirection vers une page d’information  
 
----
+
 
 ## 🚀 Installation
 
@@ -16,7 +16,7 @@ Une extension Chrome/Firefox qui vous permet de :
 3. Sélectionner le **dossier racine** de l’extension (contenant `manifest.json`).  
 4. L’extension est a présent ajoutée
 
----
+
 
 ## ⚙️ Configuration & Usage
 
@@ -30,7 +30,7 @@ Une extension Chrome/Firefox qui vous permet de :
    - Saisissez un nom de domaine (ex. `example.com`)  
    - Cliquez sur **Ajouter / Supprimer**  
    - Les modifications sont prises en compte immédiatement.  
----
+
 
 
 ## 📜 Licence
