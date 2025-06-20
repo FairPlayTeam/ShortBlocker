@@ -3,7 +3,6 @@
 (async () => {
   const {
     filterYtShorts = false,
-    filterIgReels = false,
     filterSnapVert = false
   } = await chrome.storage.sync.get([
     'filterYtShorts',
