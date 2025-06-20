@@ -32,7 +32,6 @@ Une extension Chrome/Firefox qui vous permet de :
    - Les modifications sont prises en compte immédiatement.  
 ---
 
----
 
 ## 📜 Licence
 
