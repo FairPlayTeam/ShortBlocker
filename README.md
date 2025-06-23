@@ -1,39 +1,38 @@
 # Vertical Content Bloquer
 
-Une extension Chrome/Firefox qui vous permet de :
+An addon for Chromium/Firefox that let you :
+- **Delete** Youtube shorts, snapchat vertical content, and Instagram Reels soon
+- **Block** completely TikTok or other custom domain
 
-- **Supprimer** les YouTube Shorts et les Instagram Reels directement dans le flux  
-- **Bloquer** complètement TikTok et tout autre domaine de votre choix, avec redirection vers une page d’information  
+## Download
+- Chromium version (Edge, Chrome) [openstream-chromium.zip](https://newstreamteam.github.io/NewStream-Main/downloads/openstream-chromium.zip)
+- Firefox version [openstream-firefox.zip](https://newstreamteam.github.io/NewStream-Main/downloads/openstream-firefox.zip)
+## 🚀 Setup
 
-
-
-## 🚀 Installation
-
-1. **Cloner ou télécharger** ce dépôt dans un dossier local.  
-2. Ouvrir votre navigateur en **mode développement** :
-   - **Chrome/Edge** : `Menu > Extensions > Charger l’extension non empaquetée`  
+1. **Download** the zip file
+2. Open your browser in **developper mode** :
+   - **Chrome/Edge** : `Menu > Add-ons > Load unpackaged extension`  
    - **Firefox** : `about:debugging` → “This Firefox” → “Load Temporary Add-on”  
-3. Sélectionner le **dossier racine** de l’extension (contenant `manifest.json`).  
-4. L’extension est a présent ajoutée
-
+3. Select the **zip file** (containing `manifest.json`).  
+4. Well done ! The add-ons is now added
 
 
 ## ⚙️ Configuration & Usage
 
-1. Cliquez sur l’icône de l’extension pour ouvrir le **popup**.  
-2. Cochez/décochez les filtres :
+1. Click into the **Add-on** button of your browser to open the **popup**.  
+2. Check/uncheck filters :
    - **YouTube Shorts**  
-   - **Instagram Reels**  
+   - **Instagram Reels** (implemented soon)
    - **Snapchat vertical**  
-   - **Bloquer TikTok**  
-3. **Ajouter ou supprimer** un domaine personnalisé :
-   - Saisissez un nom de domaine (ex. `example.com`)  
-   - Cliquez sur **Ajouter / Supprimer**  
-   - Les modifications sont prises en compte immédiatement.  
+   - **TikTok**  
+3. **Add or remove** a custom domain :
+   - Type the domain name (ex. `example.com`)  
+   - Click one **Add / Delete**  
+   - The changes are applied immediately.
 
 
 
 ## 📜 Licence
 
-MIT © 2025 — Libre d’utilisation et de modification.
+MIT © 2025 — Free to use and modify.
 
