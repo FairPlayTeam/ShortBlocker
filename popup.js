@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // initializing custom domain list
     window.blocked = store[prefs.customList] || [];
+    // Display the custom domain list on load
+    renderCustomDomainList();
   });
 
   document.getElementById('addDomain').addEventListener('click', () => {
@@ -27,29 +29,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const idx = window.blocked.indexOf(dom);
     if (idx === -1) {
       window.blocked.push(dom);
-      let list = document.getElementById("customDomainList");
-        for (i = 0; i < window.blocked.length; ++i) {
-            let li = document.createElement('li');
-            li.innerText = data[i];
-            list.appendChild(li);
-        }
       alert(`${dom} added to the blacklist.`);
     } else {
-      window.blocked.splice(idx,1);
-      let list = document.getElementById("customDomainList");
-        for (i = 0; i < window.blocked.length; ++i) {
-            let li = document.createElement('li');
-            li.innerText = data[i];
-            list.appendChild(li);
-        }
+      window.blocked.splice(idx, 1);
       alert(`${dom} removed from the blacklist.`);
     }
+    renderCustomDomainList();
     chrome.storage.sync.set({ [prefs.customList]: window.blocked }, notifyBackground);
     document.getElementById('customDomain').value = '';
   });
 });
 
-// prévenir le background de recharger les règles
+// Function to render the custom domain list
+function renderCustomDomainList() {
+ let list = document.getElementById("customDomainList");
+  list.innerHTML = ''; // Clear existing list
+  for (let i = 0; i < window.blocked.length; ++i) {
+    let li = document.createElement('li');
+    li.innerText = window.blocked[i];
+    list.appendChild(li);
+  }
+}
+
 function notifyBackground() {
   chrome.runtime.sendMessage({ type: 'updateRules' });
 }
