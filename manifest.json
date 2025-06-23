@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Anti-Vertical Content",
+  "name": "OpenStream Anti-Vertical Content",
   "version": "1.0",
-  "description": "Filtre les contenus verticaux indésirables et bloque des sites au choix.",
+  "description": "Filters unwanted vertical content and blocks sites of your choice.",
   "permissions": [
     "storage",
     "declarativeNetRequest",
