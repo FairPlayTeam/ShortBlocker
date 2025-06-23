@@ -1,0 +1,38 @@
+name: Build CRX on Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-crx:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install zip tool
+        run: sudo apt-get install -y zip
+
+      - name: Restore private key
+        run: echo "${{ secrets.CHROME_PRIVATE_KEY }}" | base64 -d > key.pem
+
+      - name: Zip extension
+        run: |
+          mkdir -p dist
+          zip -r dist/extension.zip . -x ".git/*" ".github/*" "node_modules/*" "*.pem" "dist/*"
+
+      - name: Install CRX packer
+        run: npm install -g crx
+
+      - name: Build CRX
+        run: |
+          crx pack dist/extension.zip -o dist/extension.crx -p key.pem
+
+      - name: Upload CRX
+        uses: actions/upload-artifact@v4
+        with:
+          name: chrome-extension
+          path: dist/extension.crx
