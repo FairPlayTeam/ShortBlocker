@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (idx === -1) {
       window.blocked.push(dom);
       let list = document.getElementById("customDomainList");
-        for (i = 0; i < data.length; ++i) {
+        for (i = 0; i < window.blocked.length; ++i) {
             let li = document.createElement('li');
             li.innerText = data[i];
             list.appendChild(li);
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       window.blocked.splice(idx,1);
       let list = document.getElementById("customDomainList");
-        for (i = 0; i < data.length; ++i) {
+        for (i = 0; i < window.blocked.length; ++i) {
             let li = document.createElement('li');
             li.innerText = data[i];
             list.appendChild(li);
