@@ -27,9 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const idx = window.blocked.indexOf(dom);
     if (idx === -1) {
       window.blocked.push(dom);
+      let list = document.getElementById("customDomainList");
+        for (i = 0; i < data.length; ++i) {
+            let li = document.createElement('li');
+            li.innerText = data[i];
+            list.appendChild(li);
+        }
       alert(`${dom} added to the blacklist.`);
     } else {
       window.blocked.splice(idx,1);
+      let list = document.getElementById("customDomainList");
+        for (i = 0; i < data.length; ++i) {
+            let li = document.createElement('li');
+            li.innerText = data[i];
+            list.appendChild(li);
+        }
       alert(`${dom} removed from the blacklist.`);
     }
     chrome.storage.sync.set({ [prefs.customList]: window.blocked }, notifyBackground);
