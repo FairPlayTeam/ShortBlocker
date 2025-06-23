@@ -7,7 +7,7 @@ async function updateBlockingRules() {
       blockedDomains: []
     });
 
-  // Récupère et supprime toutes les règles existantes
+  // Retrieves and deletes all existing rules
   const existing = await chrome.declarativeNetRequest.getDynamicRules();
   const removeRuleIds = existing.map(r => r.id);
 
@@ -30,7 +30,7 @@ async function updateBlockingRules() {
     });
   }
 
-  // Redirect domaines personnalisés
+  // Redirect custom domain
   for (const dom of blockedDomains) {
     newRules.push({
       id: nextId++,
