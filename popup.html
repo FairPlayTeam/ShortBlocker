@@ -5,7 +5,7 @@
   <title>OpenStream Vertical Content Blocker</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 10px; width: 250px; background: #1f2937; color: white; font: "Apple", sans-serif;}
-    h1 {padding-bottom: 20px;}
+    h1 {padding-bottom: 10px;}
     li {list-style-type: none; padding-bottom: 5px;}
     label { display: block; margin: 8px 0; padding-bottom: 5px;}
     input[type="text"] { width: 100%; box-sizing: border-box; background:#374151; border:0px; color:white; border-radius: 5px; padding: 10px}
@@ -15,14 +15,13 @@
 </head>
 <body>
   <center><h1>OpenStream</h1></center>
-  <h3>Activated Filter</h3>
   <label><input type="checkbox" id="ytShorts"> YouTube Shorts</label>
   <label><input type="checkbox" id="igReels"> Instagram Reels (WIP)</label>
   <label><input type="checkbox" id="blockTikTok"> TikTok</label>
   <label><input type="checkbox" id="snapVert"> Snapchat Spotlights</label>
 
   <h4>Custom website</h4>
-  <input type="text" id="customDomain" placeholder="ex. example.com">
+  <input type="text" id="customDomain" placeholder="e.g. example.com">
   <ul id="customDomainList"></ul>  
   <button id="addDomain">Add / Delete</button>
   <script src="popup.js"></script>
