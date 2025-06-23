@@ -1,7 +1,6 @@
-// récupère et affiche les préférences
+// retrieves and displays preferences
 const prefs = {
   ytShorts: 'filterYtShorts',
-  igReels: 'filterIgReels',
   blockTikTok: 'blockTikTok',
   snapVert: 'filterSnapVert',
   customList: 'blockedDomains'
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
-    // initialisation de la liste des domaines personnalisées
+    // initializing custom domain list
     window.blocked = store[prefs.customList] || [];
   });
 
@@ -28,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const idx = window.blocked.indexOf(dom);
     if (idx === -1) {
       window.blocked.push(dom);
-      alert(`${dom} ajouté à la liste de blocage.`);
+      alert(`${dom} added to the blacklist.`);
     } else {
       window.blocked.splice(idx,1);
-      alert(`${dom} retiré de la liste de blocage.`);
+      alert(`${dom} removed from the blacklist.`);
     }
     chrome.storage.sync.set({ [prefs.customList]: window.blocked }, notifyBackground);
     document.getElementById('customDomain').value = '';
