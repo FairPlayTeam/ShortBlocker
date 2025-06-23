@@ -6,11 +6,10 @@
     filterSnapVert = false
   } = await chrome.storage.sync.get([
     'filterYtShorts',
-    'filterIgReels',
     'filterSnapVert'
   ]);
 
-  // YouTube Shorts suppression
+  // Remove Youtube Shorts
   if (filterYtShorts && location.host.includes('youtube.com')) {
     const removeYt = () => {
       document.querySelectorAll(
@@ -24,7 +23,7 @@
     removeYt();
   }
 
-  // Snapchat vertical et son placeholder
+  // Snapchat vertical and his placeholder
   if (filterSnapVert && location.host.includes('snapchat.com')) {
     const replaceWithPlaceholder = el => {
       const ph = document.createElement('div');
@@ -51,13 +50,14 @@
           background:#007bff;
           color:#fff;
         "
-        onclick="window.open('https://newstream.com','_blank')">
-          Voir sur newstream.com
+        onclick="window.open('https://newstreamteam.github.io/NewStream-Main/','_blank')">
+          More info on our website
         </button>
       `;
       el.replaceWith(ph);
     };
-
+    
+    // snap observer
     const obsSnap = () => {
       document
         .querySelectorAll('[class*="vertical"], video[orientation="vertical"]')
