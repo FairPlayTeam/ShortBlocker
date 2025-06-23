@@ -13,25 +13,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install zip tool
-        run: sudo apt-get install -y zip
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # or '20' if your project requires it
+
+      - name: Install dependencies
+        run: sudo apt-get install -y zip rsync
 
       - name: Restore private key
         run: echo "${{ secrets.CHROME_PRIVATE_KEY }}" | base64 -d > key.pem
 
-      - name: Zip extension
-        run: |
-          mkdir -p dist
-          zip -r dist/extension.zip . -x ".git/*" ".github/*" "node_modules/*" "*.pem" "dist/*"
-
-      - name: Install CRX packer
+      - name: Install CRX CLI
         run: npm install -g crx
 
-      - name: Build CRX
+      - name: Copy extension files into build folder
         run: |
-          crx pack dist/extension.zip -o dist/extension.crx -p key.pem
+          mkdir -p dist/src
+          rsync -av --exclude='node_modules' --exclude='dist' --exclude='.git' --exclude='*.pem' . dist/src
 
-      - name: Upload CRX
+      - name: Build CRX file
+        run: |
+          crx pack dist/src -o dist/extension.crx -p key.pem
+
+      - name: Upload CRX file as artifact
         uses: actions/upload-artifact@v4
         with:
           name: chrome-extension
