@@ -21,6 +21,15 @@
       subtree: true
     });
     removeYt();
+    if (location.pathname.includes("/shorts")) {
+      path_array = location.pathname.split("/")
+      const video_id = path_array[path_array.indexOf("shorts") + 1]
+      if (video_id != null) {
+        location.replace(location.protocol + "//" + location.host + "/watch?v=" + video_id)
+      } else {
+        location.replace(location.protocol + "//" + location.host)
+      }
+    }
   }
 
   // Snapchat vertical and his placeholder
