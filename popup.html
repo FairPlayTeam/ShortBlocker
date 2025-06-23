@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <title>OpenStream Vertical Content Blocker</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 10px; width: 250px; }
-    label { display: block; margin: 8px 0; }
-    input[type="text"] { width: 100%; box-sizing: border-box; }
-    button { margin-top: 10px; width: 100%; }
+    body { font-family: Arial, sans-serif; padding: 10px; width: 250px; background: #1f2937; color: white; font: "Apple", sans-serif;}
+    h1 {padding-bottom: 20px;}
+    li {list-style-type: none; padding-bottom: 5px;}
+    label { display: block; margin: 8px 0; padding-bottom: 5px;}
+    input[type="text"] { width: 100%; box-sizing: border-box; background:#374151; border:0px; color:white; border-radius: 5px; padding: 10px}
+    button { margin-top: 10px; width: 100%; background: #2563eb; border: 0px; border-radius: 10px; padding: 10px; color: white; transition-duration: 0.2s;}
+    button:hover {box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.24);}
   </style>
 </head>
 <body>
@@ -16,7 +19,7 @@
   <label><input type="checkbox" id="ytShorts"> YouTube Shorts</label>
   <label><input type="checkbox" id="igReels"> Instagram Reels (implemented soon !)</label>
   <label><input type="checkbox" id="blockTikTok"> TikTok</label>
-  <label><input type="checkbox" id="snapVert"> Snapchat Spotlights</label>
+  <label><input type="checkbox" id="snapVert"> Snapchat vertical</label>
 
   <h4>Custom website</h4>
   <input type="text" id="customDomain" placeholder="ex. example.com">
