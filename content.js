@@ -59,7 +59,7 @@
           background:#007bff;
           color:#fff;
         "
-        onclick="window.open('https://newstreamteam.github.io/NewStream-Main/','_blank')">
+        onclick="window.open('https://fairplay.video','_blank')">
           More info on our website
         </button>
       `;
