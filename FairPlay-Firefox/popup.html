@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Anti-Vertical Content</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 10px; width: 250px; }
+    label { display: block; margin: 8px 0; }
+    input[type="text"] { width: 100%; box-sizing: border-box; }
+    button { margin-top: 10px; width: 100%; }
+  </style>
+</head>
+<body>
+  <h3>Filtres activés</h3>
+  <label><input type="checkbox" id="ytShorts"> YouTube Shorts</label>
+  <label><input type="checkbox" id="igReels"> Instagram Reels</label>
+  <label><input type="checkbox" id="blockTikTok"> Bloquer TikTok</label>
+  <label><input type="checkbox" id="snapVert"> Snapchat vertical</label>
+
+  <h4>Bloquer un site</h4>
+  <input type="text" id="customDomain" placeholder="ex. example.com">
+  <button id="addDomain">Ajouter / Supprimer</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
