@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "FairPlay Anti-Vertical Content",
-  "version": "1.0",
+  "version": "2.0",
   "description": "Filters unwanted vertical content and blocks sites of your choice.",
   
   "icons": {
