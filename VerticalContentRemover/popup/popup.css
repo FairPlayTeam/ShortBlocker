@@ -1,0 +1,137 @@
+body {
+    font-family: Montserrat, sans-serif;
+    width: 250px;
+    box-sizing: border-box;
+    background: #212121;
+    color: white;
+    margin: 20px;
+}
+
+h1 {
+    padding: 10px 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #8b8b8b;
+    margin: 0;
+}
+
+h4 {
+    font-size: 12px;
+    margin-top: 16px;
+    text-align: center;
+    color: #747474;
+}
+
+a {
+    color: #6b90ff;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+    padding-bottom: 5px;
+}
+
+label {
+    margin: 8px 0;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    background: #272626;
+    height: 45px;
+    font-size: 14px;
+    border: 1px solid #444444;
+    color: #bbbbbb;
+    border-radius: 6px;
+    padding: 10px;
+    transform: 200ms;
+}
+
+input[type="text"]:focus {
+    outline: 1px solid #4564c0;
+}
+
+#addDomain {
+    width: 100%;
+    background: #4564c0;
+    border: 0px;
+    height: 45px;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 10px;
+    color: #ffffff;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+#addDomain:hover {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.custom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+#customList {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #444444;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #444444;
+    border-radius: 6px;
+}
+
+#customList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 12px;
+    background-color: #292929;
+}
+
+#customList li .delete-btn {
+    background: none;
+    border: none;
+    color: #6b6b6b;
+    font-size: 25px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+#customList li .delete-btn:hover {
+    background-color: #444444;
+}
+
+#customList li:hover {
+    background-color: #2e2e2e;
+}
