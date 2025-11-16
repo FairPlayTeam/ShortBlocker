@@ -7,21 +7,23 @@ const runtime = isFirefox ? browser.runtime : chrome.runtime;
 
 const PREFERENCES = {
   ytShorts: 'filterYtShorts',
-  blockTikTok: 'blockTikTok',
   snapVert: 'filterSnapVert',
+  igReels: 'filterInstaReels',
+  blockTikTok: 'blockTikTok',
   customList: 'blockedDomains',
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
   const {
     [PREFERENCES.ytShorts]: ytShorts,
-    [PREFERENCES.blockTikTok]: blockTikTok,
     [PREFERENCES.snapVert]: snapVert,
+    [PREFERENCES.igReels]: igReels,
+    [PREFERENCES.blockTikTok]: blockTikTok,
     [PREFERENCES.customList]: blockedDomains = []
   } = await storage.get(Object.values(PREFERENCES));
 
   // Initialize checkboxes
-  Object.entries({ ytShorts, blockTikTok, snapVert }).forEach(([key, value]) => {
+  Object.entries({ ytShorts, snapVert, igReels, blockTikTok }).forEach(([key, value]) => {
     const checkbox = document.getElementById(key);
     if (checkbox) {
       checkbox.checked = !!value;
@@ -49,9 +51,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!domain) return;
     const index = window.blocked.indexOf(domain);
     if (index === -1) {
-    window.blocked.push(domain);
+      window.blocked.push(domain);
     } else {
-    window.blocked.splice(index, 1);
+      window.blocked.splice(index, 1);
     }
     renderCustomDomainList();
     storage.set({ [PREFERENCES.customList]: window.blocked }, notifyBackground);
