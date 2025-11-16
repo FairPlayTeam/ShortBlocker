@@ -1,40 +1,49 @@
+<p align="center">
+  <img src="assets/preview.png" width="200">
+</p>
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D31GU3L5)
 
 # Vertical Content Blocker
 
-An addon for Chromium/Firefox that lets you:
-- **Delete** Youtube Shorts, Snapchat Spotlights, and Instagram Reels (WIP)
-- **Block** completely TikTok or any website
+A lightweight browser add-on for Chromium and Firefox designed to help you take back control of your attention.
+
+It lets you:
+
+* **Remove** YouTube Shorts, Snapchat Spotlights, and (soon) Instagram Reels
+* **Completely block** TikTok or any custom website you choose
 
 ## Install
-- [For Chromium (Edge, Chrome)](https://microsoftedge.microsoft.com/addons/detail/antivertical-content/aafojaecolkacnnbkmodafapbcbcapkb)
-- The Firefox version will be published soon, you can still install it by following the instructions bellow.
 
-# Installation for developers
-## Setup
+* **Chromium (Chrome, Edge)**: [Download from the Microsoft Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/detail/antivertical-content/aafojaecolkacnnbkmodafapbcbcapkb)
+* **Firefox**: Coming soon!
+  Meanwhile, you can still install it manually by following the developer setup below.
 
-1. **Download** the repository
-2. If you want to install the extension for Firefox, rename `manifest.firefox.json` into `manifest.json`, you can do the same thing for Chromium.
-2. Open your browser in **developer mode**:
-   - **Chrome / Edge**: Menu -> "Add-ons" -> "Load unpackaged extension" -> select the folder containing the code
-   - **Firefox**: `about:debugging` -> "This Firefox" -> "Load Temporary Add-on" -> Select `manifest.json`
-3. Well done! The add-on is now installed.
+## Installation for Developers
 
+1. **Download** or clone this repository.
+2. If you're installing for Firefox, rename `manifest.firefox.json` to `manifest.json`.
+   For Chromium, do the same with the Chromium version of the manifest.
+3. Load the extension in **developer mode**:
+
+   * **Chrome / Edge**: Menu → **Add-ons** → **Load unpacked extension** → select the project folder.
+   * **Firefox**: Navigate to `about:debugging` → **This Firefox** → **Load Temporary Add-on** → choose `manifest.json`.
+4. You're all set — the extension is now active!
 
 ## Configuration & Usage
 
-1. Click on the Add-on icon to open it.
-2. Check/uncheck filters:
-   - **YouTube Shorts**  
-   - **Instagram Reels** (WIP)
-   - **Snapchat Spotlights**  
-   - **TikTok**  
+1. Click the extension icon in your browser toolbar.
+2. Toggle the filters you want:
+
+   * **YouTube Shorts**
+   * **Instagram Reels** *(WIP)*
+   * **Snapchat Spotlights**
+   * **TikTok**
 3. Add or remove a custom website:
-   - Type the domain name (e.g. `example.com`)  
-   - Click **Add**  
-   - The changes are applied immediately.
 
+   * Enter a domain name (e.g. `example.com`), then click **Add**.
+   * Your changes apply instantly.
 
-## 📜 Licence
+## License
 
-MIT © 2025 - Free to use and modify.
+MIT © 2025 - free to use, modify, and contribute.

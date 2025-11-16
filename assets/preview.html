@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FairPlay (Vertical Content Blocker)</title>
+        <link rel="stylesheet" href="VerticalContentRemover\popup\popup.css">
+    </head>
+    <body>
+        <h1 class="title">FairPlay</h1>
+
+        <form>
+            <label class="checkbox">
+                <input type="checkbox" id="ytShorts" name="ytShorts">
+                YouTube Shorts
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox" id="snapVert" name="snapVert">
+                Snapchat Spotlights
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox" id="igReels" name="igReels">
+                Instagram Reels (WIP)
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox" id="blockTikTok" name="blockTikTok">
+                TikTok
+            </label>
+        </form>
+
+        <div class="custom">
+            <h2>Block custom website</h2>
+            <ul id="customList">
+            <li>
+            x.com
+            <button class="delete-btn" data-domain="x.com">×</button>
+            </li>
+        
+            <li>
+            twitter.com
+            <button class="delete-btn" data-domain="twitter.com">×</button>
+            </li>
+        </ul>
+            <input type="text" id="customDomain" placeholder="e.g. example.com">
+            <button id="addDomain">Add</button>
+        </div>
+        <h4>by <a href="https://fairplay.video" target="_blank">fairplay.video</a></h4>
+    </body>
+</html>
