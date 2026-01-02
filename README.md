@@ -16,8 +16,7 @@ It lets you:
 ## Install
 
 * **Chromium (Chrome, Edge)**: [Download from the Microsoft Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/detail/antivertical-content/aafojaecolkacnnbkmodafapbcbcapkb)
-* **Firefox**: Coming soon!
-  Meanwhile, you can still install it manually by following the developer setup below.
+* **Firefox**: [Download from the Firefox Add-ons Store](https://addons.mozilla.org/fr/firefox/addon/fairplay-anti-vertical-content/)
 
 ## Installation for Developers
 
